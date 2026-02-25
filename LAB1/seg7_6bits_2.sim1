@@ -1,0 +1,71 @@
+<circuit version="1.1.0-SR1" rev="2005" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="Seven Segment" CircId="Seven Segment-8" mainComp="false" Show_id="false" Show_Val="false" Pos="-300,84" rotation="-360" hflip="1" vflip="1" label="Seven Segment-8" idLabPos="20,-44" labelrot="0" valLabPos="-16,20" valLabRot="0" Color="Yellow" NumDisplays="1" Vertical_Pins="false" CommonCathode="true" Threshold="2.4 V" MaxCurrent="20 mA" Resistance="1 Ω" />
+
+<item itemtype="MCU" CircId="mega328-121" mainComp="false" Show_id="true" Show_Val="false" Pos="-532,52" rotation="0" hflip="1" vflip="1" label="mega328-121" idLabPos="-14.8722,-16.4823" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" Program="../AVR/.pio/build/uno/firmware.hex" Auto_Load="true" saveEepr="true" Logic_Symbol="false" Rst_enabled="false" Ext_Osc="false" Wdt_enabled="false" Clk_Out="false" MainMcu="true" SerialMon="-1" />
+
+<item itemtype="Ground" CircId="Ground-130" mainComp="false" Show_id="false" Show_Val="false" Pos="-612,96" rotation="0" hflip="1" vflip="1" label="Ground-130" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Push" CircId="Push-131" mainComp="false" Show_id="false" Show_Val="false" Pos="-584,68" rotation="0" hflip="1" vflip="1" label="Push-131" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" Poles="1" />
+
+<item itemtype="Probe" CircId="Probe-142" mainComp="false" Show_id="false" Show_Val="true" Pos="-576,52" rotation="-45" hflip="-1" vflip="1" label="Probe-142" idLabPos="16,-16" labelrot="45" valLabPos="16,0" valLabRot="45" ShowVolt="true" Threshold="2.5 V" />
+
+<item itemtype="Ground" CircId="Ground-145" mainComp="false" Show_id="false" Show_Val="false" Pos="-292,132" rotation="180" hflip="1" vflip="-1" label="Ground-145" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="BJT" CircId="BJT-269" mainComp="false" ShowProp="Vcrit" Show_id="false" Show_Val="true" Pos="-352,20" rotation="0" hflip="1" vflip="-1" label="BJT-269" idLabPos="18,0" labelrot="0" valLabPos="-16,20" valLabRot="0" PNP="false" Gain="100" Vcrit="35 mV" />
+
+<item itemtype="Probe" CircId="Probe-340" mainComp="false" Show_id="false" Show_Val="true" Pos="-460,116" rotation="-45" hflip="-1" vflip="-1" label="Probe-340" idLabPos="16,-16" labelrot="45" valLabPos="-24.9095,9.50871" valLabRot="45" ShowVolt="true" Threshold="2.5 V" />
+
+<item itemtype="BJT" CircId="BJT-265" mainComp="false" ShowProp="Vcrit" Show_id="false" Show_Val="true" Pos="-364,156" rotation="0" hflip="1" vflip="-1" label="BJT-265" idLabPos="18,0" labelrot="0" valLabPos="-18.1891,-27.2221" valLabRot="0" PNP="false" Gain="100" Vcrit="35 mV" />
+
+<item itemtype="Node" CircId="Node-284" mainComp="false" Pos="-344,-8" />
+
+<item itemtype="Node" CircId="Node-342" mainComp="false" Pos="-376,108" />
+
+<item itemtype="Node" CircId="Node-268" mainComp="false" Pos="-340,92" />
+
+<item itemtype="Node" CircId="Node-266" mainComp="false" Pos="-388,132" />
+
+<item itemtype="Node" CircId="Node-285" mainComp="false" Pos="-344,84" />
+
+<item itemtype="Connector" uid="Connector-406" startpinid="Push-131-switch0pinN" endpinid="mega328-121-PORTD0" pointList="-568,68,-540,68" />
+
+<item itemtype="Connector" uid="Connector-407" startpinid="Ground-130-Gnd" endpinid="Push-131-pinP0" pointList="-612,80,-612,68,-600,68" />
+
+<item itemtype="Connector" uid="Connector-443" startpinid="Seven Segment-8-pin_commona" endpinid="Ground-145-Gnd" pointList="-292,116,-292,116" />
+
+<item itemtype="Connector" uid="Connector-885" startpinid="BJT-269-emiter" endpinid="Node-284-0" pointList="-344,4,-344,-8" />
+
+<item itemtype="Connector" uid="Connector-886" startpinid="Node-284-2" endpinid="Seven Segment-8-pin_a" pointList="-344,-8,-328,-8,-328,60,-324,60" />
+
+<item itemtype="Connector" uid="Connector-1083" startpinid="mega328-121-PORTC3" endpinid="Seven Segment-8-pin_c" pointList="-492,76,-396,76,-396,68,-336,68,-336,76,-324,76" />
+
+<item itemtype="Connector" uid="Connector-1087" startpinid="mega328-121-PORTC4" endpinid="Seven Segment-8-pin_b" pointList="-492,68,-408,68,-408,48,-332,48,-332,68,-324,68" />
+
+<item itemtype="Connector" uid="Connector-1091" startpinid="mega328-121-PORTC5" endpinid="Node-284-1" pointList="-492,60,-412,60,-412,-8,-344,-8" />
+
+<item itemtype="Connector" uid="Connector-1109" startpinid="Node-342-1" endpinid="BJT-269-base" pointList="-376,108,-376,20,-368,20" />
+
+<item itemtype="Connector" uid="Connector-1110" startpinid="Seven Segment-8-pin_g" endpinid="Node-342-0" pointList="-324,108,-376,108" />
+
+<item itemtype="Connector" uid="Connector-1111" startpinid="Node-342-2" endpinid="mega328-121-PORTC0" pointList="-376,108,-376,100,-492,100" />
+
+<item itemtype="Connector" uid="Connector-1079" startpinid="mega328-121-PORTC2" endpinid="Node-268-1" pointList="-492,84,-384,84,-384,92,-340,92" />
+
+<item itemtype="Connector" uid="Connector-870" startpinid="Node-268-2" endpinid="Seven Segment-8-pin_e" pointList="-340,92,-324,92" />
+
+<item itemtype="Connector" uid="Connector-1074" startpinid="mega328-121-PORTC1" endpinid="Node-266-0" pointList="-492,92,-388,92,-388,132" />
+
+<item itemtype="Connector" uid="Connector-808" startpinid="Node-266-2" endpinid="BJT-265-base" pointList="-388,132,-388,156,-380,156" />
+
+<item itemtype="Connector" uid="Connector-889" startpinid="Node-285-2" endpinid="Seven Segment-8-pin_d" pointList="-344,84,-324,84" />
+
+<item itemtype="Connector" uid="Connector-888" startpinid="BJT-269-collector" endpinid="Node-285-0" pointList="-344,36,-344,84" />
+
+<item itemtype="Connector" uid="Connector-887" startpinid="BJT-265-emiter" endpinid="Node-285-1" pointList="-356,140,-356,84,-344,84" />
+
+<item itemtype="Connector" uid="Connector-806" startpinid="Node-266-1" endpinid="Seven Segment-8-pin_f" pointList="-388,132,-332,132,-332,100,-324,100" />
+
+<item itemtype="Connector" uid="Connector-813" startpinid="BJT-265-collector" endpinid="Node-268-0" pointList="-356,172,-340,172,-340,92" />
+
+</circuit>

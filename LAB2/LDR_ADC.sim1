@@ -1,0 +1,41 @@
+<circuit version="1.1.0-SR1" rev="2005" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="Ground" CircId="Ground-5" mainComp="false" Show_id="false" Show_Val="false" Pos="28,-48" rotation="0" hflip="1" vflip="1" label="Ground-5" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Probe" CircId="Probe-9" mainComp="false" Show_id="false" Show_Val="true" Pos="36,-168" rotation="-45" hflip="1" vflip="1" label="Probe-9" idLabPos="16,-16" labelrot="45" valLabPos="14.8383,-9.99046" valLabRot="45" ShowVolt="true" Threshold="2.5 V" />
+
+<item itemtype="Probe" CircId="Probe-13" mainComp="false" Show_id="false" Show_Val="true" Pos="-28,-168" rotation="-45" hflip="1" vflip="1" label="Probe-13" idLabPos="16,-16" labelrot="45" valLabPos="4.38319,-20.4456" valLabRot="45" ShowVolt="true" Threshold="2.5 V" />
+
+<item itemtype="LDR" CircId="LDR-22" mainComp="false" ShowProp="Lux" Show_id="false" Show_Val="true" Pos="-68,-152" rotation="360" hflip="1" vflip="1" label="LDR-22" idLabPos="-16,-24" labelrot="0" valLabPos="-16,30" valLabRot="0" Lux="5160 Lux" Min_Lux="1e-12 Lux" Max_Lux="10000 Lux" Dial_Step="0 Lux" Gamma="0.65" R1="127410 Ω" Slider="false" Scale="1" />
+
+<item itemtype="Fixed Voltage" CircId="Fixed Voltage-6" mainComp="false" Show_id="false" Show_Val="false" Pos="-116,-152" rotation="0" hflip="1" vflip="1" label="Fixed Voltage-6" idLabPos="-64,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Voltage="5 V" Out="true" />
+
+<item itemtype="VarResistor" CircId="VarResistor-38" mainComp="false" ShowProp="Value_Ohm" Show_id="false" Show_Val="true" Pos="0,-152" rotation="0" hflip="1" vflip="1" label="VarResistor-38" idLabPos="-16,-24" labelrot="0" valLabPos="-16,30" valLabRot="0" Min_Resistance="1e-12 Ω" Max_Resistance="10 kΩ" Value_Ohm="960 Ω" Dial_Step="0 Ω" Slider="false" Scale="1" />
+
+<item itemtype="MCU" CircId="mega328-44" mainComp="false" Show_id="true" Show_Val="false" Pos="-160,-112" rotation="720" hflip="1" vflip="1" label="mega328-44" idLabPos="9.20408,134.845" labelrot="270" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" Program="../../AVR/.pio/build/uno/firmware.hex" Auto_Load="false" saveEepr="true" Logic_Symbol="false" Rst_enabled="false" Ext_Osc="false" Wdt_enabled="false" Clk_Out="false" MainMcu="true" SerialMon="1" />
+
+<item itemtype="SerialTerm" CircId="SerialTerm-47" mainComp="false" ShowProp="Baudrate" Show_id="false" Show_Val="true" Pos="-252,-88" rotation="0" hflip="-1" vflip="1" label="SerialTerm-47" idLabPos="-20,-32" labelrot="0" valLabPos="-16,20" valLabRot="0" Baudrate="9600 _Bd" DataBits="8 _bits" StopBits="1 _bits" SerialMon="true" />
+
+<item itemtype="Node" CircId="Node-50" mainComp="false" Pos="-24,-152" />
+
+<item itemtype="Node" CircId="Node-51" mainComp="false" Pos="-92,-152" />
+
+<item itemtype="Connector" uid="Connector-133" startpinid="SerialTerm-47-pin0" endpinid="mega328-44-PORTD0" pointList="-228,-96,-168,-96" />
+
+<item itemtype="Connector" uid="Connector-134" startpinid="SerialTerm-47-pin1" endpinid="mega328-44-PORTD1" pointList="-228,-80,-228,-88,-168,-88" />
+
+<item itemtype="Connector" uid="Connector-143" startpinid="Node-50-1" endpinid="mega328-44-PORTC0" pointList="-24,-152,-24,-64,-120,-64" />
+
+<item itemtype="Connector" uid="Connector-144" startpinid="LDR-22-rPin" endpinid="Node-50-0" pointList="-52,-152,-24,-152" />
+
+<item itemtype="Connector" uid="Connector-145" startpinid="Node-50-2" endpinid="VarResistor-38-lPin" pointList="-24,-152,-16,-152" />
+
+<item itemtype="Connector" uid="Connector-146" startpinid="VarResistor-38-rPin" endpinid="Ground-5-Gnd" pointList="16,-152,28,-152,28,-64" />
+
+<item itemtype="Connector" uid="Connector-147" startpinid="mega328-44-PORTV1" endpinid="Node-51-1" pointList="-120,-48,-92,-48,-92,-152" />
+
+<item itemtype="Connector" uid="Connector-148" startpinid="Fixed Voltage-6-outnod" endpinid="Node-51-0" pointList="-100,-152,-92,-152" />
+
+<item itemtype="Connector" uid="Connector-149" startpinid="Node-51-2" endpinid="LDR-22-lPin" pointList="-92,-152,-84,-152" />
+
+</circuit>
