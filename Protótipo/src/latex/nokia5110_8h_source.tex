@@ -1,0 +1,68 @@
+\doxysection{nokia5110.\+h}
+\hypertarget{nokia5110_8h_source}{}\label{nokia5110_8h_source}\mbox{\hyperlink{nokia5110_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*\ Nokia\ 5110\ LCD\ AVR\ Library}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ Copyright\ (C)\ 2015\ Sergey\ Denisov.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ Written\ by\ Sergey\ Denisov\ aka\ LittleBuster\ (DenisovS21@gmail.com)}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ This\ library\ is\ free\ software;\ you\ can\ redistribute\ it\ and/or}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *\ modify\ it\ under\ the\ terms\ of\ the\ GNU\ General\ Public\ Licence}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ as\ published\ by\ the\ Free\ Software\ Foundation;\ either\ version\ 3}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *\ of\ the\ Licence,\ or\ (at\ your\ option)\ any\ later\ version.}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ Original\ library\ written\ by\ SkewPL,\ http://skew.tk}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#ifndef\ \_\_NOKIA\_5110\_H\_\_}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ \_\_NOKIA\_5110\_H\_\_}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <avr/pgmspace.h>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ *\ LCD's\ port}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#define\ PORT\_LCD\ PORTB}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ DDR\_LCD\ DDRB}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00027\ \textcolor{comment}{\ *\ LCD's\ pins}}
+\DoxyCodeLine{00028\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#define\ LCD\_SCE\ PB1}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#define\ LCD\_RST\ PB2}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#define\ LCD\_DC\ PB3}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#define\ LCD\_DIN\ PB4}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#define\ LCD\_CLK\ PB5}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#define\ LCD\_CONTRAST\ 0x40}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00038\ \textcolor{comment}{\ *\ Must\ be\ called\ once\ before\ any\ other\ function,\ initializes\ display}}
+\DoxyCodeLine{00039\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00040\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{nokia5110_8h_a23be879b43e8bf72168ba41c97e7c8b2}{nokia\_lcd\_init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00043\ \textcolor{comment}{\ *\ Clear\ screen}}
+\DoxyCodeLine{00044\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00045\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{nokia5110_8h_aed25e6fe66335f4a58a26151eeedb08a}{nokia\_lcd\_clear}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00052\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{nokia5110_8h_a817c37acf5475cbde7121d4f29f3c60f}{nokia\_lcd\_power}}(uint8\_t\ on);}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00060\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{nokia5110_8h_abc49cfe5b2c76fbdb9cbfdf12ad1d705}{nokia\_lcd\_set\_pixel}}(uint8\_t\ x,\ uint8\_t\ y,\ uint8\_t\ value);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00067\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{nokia5110_8c_af70b17f49cfee46c3ef8a82432f23c12}{nokia\_lcd\_write\_char}}(\textcolor{keywordtype}{char}\ code,\ uint8\_t\ scale,\ uint8\_t\ on\_off);}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00074\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{nokia5110_8c_a41696ac401102af98bbb49f42f06a744}{nokia\_lcd\_write\_string}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *str,\ uint8\_t\ scale,\ uint8\_t\ on\_off);}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00081\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{nokia5110_8c_af32628c4bc94f4bf2059d1e1b8825571}{nokia\_lcd\_set\_cursor}}(uint8\_t\ x,\ uint8\_t\ y);}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00084\ \textcolor{comment}{\ *\ Render\ screen\ to\ display}}
+\DoxyCodeLine{00085\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00086\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{nokia5110_8c_a173b5728ecb50f6575f991f3744f63b7}{nokia\_lcd\_render}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

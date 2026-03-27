@@ -1,0 +1,105 @@
+\doxysection{nokia5110\+\_\+chars.\+h}
+\hypertarget{nokia5110__chars_8h_source}{}\label{nokia5110__chars_8h_source}\mbox{\hyperlink{nokia5110__chars_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <avr/pgmspace.h>}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{keyword}{const}\ uint8\_t\ CHARSET[][5]\ \mbox{\hyperlink{gamePrototype_8c_a89227fb3608a6062dbfe97170f6fb225}{PROGMEM}}\ =\ \{}
+\DoxyCodeLine{00004\ \ \ \ \ \{\ 0x00,\ 0x00,\ 0x00,\ 0x00,\ 0x00\ \},\ \textcolor{comment}{//\ 20\ space}}
+\DoxyCodeLine{00005\ \ \ \ \ \{\ 0x00,\ 0x00,\ 0x5f,\ 0x00,\ 0x00\ \},\ \textcolor{comment}{//\ 21\ !}}
+\DoxyCodeLine{00006\ \ \ \ \ \{\ 0x00,\ 0x07,\ 0x00,\ 0x07,\ 0x00\ \},\ \textcolor{comment}{//\ 22\ "{}}}
+\DoxyCodeLine{00007\ \ \ \ \ \{\ 0x14,\ 0x7f,\ 0x14,\ 0x7f,\ 0x14\ \},\ \textcolor{comment}{//\ 23\ \#}}
+\DoxyCodeLine{00008\ \ \ \ \ \{\ 0x24,\ 0x2a,\ 0x7f,\ 0x2a,\ 0x12\ \},\ \textcolor{comment}{//\ 24\ \$}}
+\DoxyCodeLine{00009\ \ \ \ \ \{\ 0x23,\ 0x13,\ 0x08,\ 0x64,\ 0x62\ \},\ \textcolor{comment}{//\ 25\ \%}}
+\DoxyCodeLine{00010\ \ \ \ \ \{\ 0x36,\ 0x49,\ 0x55,\ 0x22,\ 0x50\ \},\ \textcolor{comment}{//\ 26\ \&}}
+\DoxyCodeLine{00011\ \ \ \ \ \{\ 0x00,\ 0x05,\ 0x03,\ 0x00,\ 0x00\ \},\ \textcolor{comment}{//\ 27\ '}}
+\DoxyCodeLine{00012\ \ \ \ \ \{\ 0x00,\ 0x1c,\ 0x22,\ 0x41,\ 0x00\ \},\ \textcolor{comment}{//\ 28\ (}}
+\DoxyCodeLine{00013\ \ \ \ \ \{\ 0x00,\ 0x41,\ 0x22,\ 0x1c,\ 0x00\ \},\ \textcolor{comment}{//\ 29\ )}}
+\DoxyCodeLine{00014\ \ \ \ \ \{\ 0x14,\ 0x08,\ 0x3e,\ 0x08,\ 0x14\ \},\ \textcolor{comment}{//\ 2a\ *}}
+\DoxyCodeLine{00015\ \ \ \ \ \{\ 0x08,\ 0x08,\ 0x3e,\ 0x08,\ 0x08\ \},\ \textcolor{comment}{//\ 2b\ +}}
+\DoxyCodeLine{00016\ \ \ \ \ \{\ 0x00,\ 0x50,\ 0x30,\ 0x00,\ 0x00\ \},\ \textcolor{comment}{//\ 2c\ ,}}
+\DoxyCodeLine{00017\ \ \ \ \ \{\ 0x08,\ 0x08,\ 0x08,\ 0x08,\ 0x08\ \},\ \textcolor{comment}{//\ 2d\ -\/}}
+\DoxyCodeLine{00018\ \ \ \ \ \{\ 0x00,\ 0x60,\ 0x60,\ 0x00,\ 0x00\ \},\ \textcolor{comment}{//\ 2e\ .}}
+\DoxyCodeLine{00019\ \ \ \ \ \{\ 0x20,\ 0x10,\ 0x08,\ 0x04,\ 0x02\ \},\ \textcolor{comment}{//\ 2f\ /}}
+\DoxyCodeLine{00020\ \ \ \ \ \{\ 0x3e,\ 0x51,\ 0x49,\ 0x45,\ 0x3e\ \},\ \textcolor{comment}{//\ 30\ 0}}
+\DoxyCodeLine{00021\ \ \ \ \ \{\ 0x00,\ 0x42,\ 0x7f,\ 0x40,\ 0x00\ \},\ \textcolor{comment}{//\ 31\ 1}}
+\DoxyCodeLine{00022\ \ \ \ \ \{\ 0x42,\ 0x61,\ 0x51,\ 0x49,\ 0x46\ \},\ \textcolor{comment}{//\ 32\ 2}}
+\DoxyCodeLine{00023\ \ \ \ \ \{\ 0x21,\ 0x41,\ 0x45,\ 0x4b,\ 0x31\ \},\ \textcolor{comment}{//\ 33\ 3}}
+\DoxyCodeLine{00024\ \ \ \ \ \{\ 0x18,\ 0x14,\ 0x12,\ 0x7f,\ 0x10\ \},\ \textcolor{comment}{//\ 34\ 4}}
+\DoxyCodeLine{00025\ \ \ \ \ \{\ 0x27,\ 0x45,\ 0x45,\ 0x45,\ 0x39\ \},\ \textcolor{comment}{//\ 35\ 5}}
+\DoxyCodeLine{00026\ \ \ \ \ \{\ 0x3c,\ 0x4a,\ 0x49,\ 0x49,\ 0x30\ \},\ \textcolor{comment}{//\ 36\ 6}}
+\DoxyCodeLine{00027\ \ \ \ \ \{\ 0x01,\ 0x71,\ 0x09,\ 0x05,\ 0x03\ \},\ \textcolor{comment}{//\ 37\ 7}}
+\DoxyCodeLine{00028\ \ \ \ \ \{\ 0x36,\ 0x49,\ 0x49,\ 0x49,\ 0x36\ \},\ \textcolor{comment}{//\ 38\ 8}}
+\DoxyCodeLine{00029\ \ \ \ \ \{\ 0x06,\ 0x49,\ 0x49,\ 0x29,\ 0x1e\ \},\ \textcolor{comment}{//\ 39\ 9}}
+\DoxyCodeLine{00030\ \ \ \ \ \{\ 0x00,\ 0x36,\ 0x36,\ 0x00,\ 0x00\ \},\ \textcolor{comment}{//\ 3a\ :}}
+\DoxyCodeLine{00031\ \ \ \ \ \{\ 0x00,\ 0x56,\ 0x36,\ 0x00,\ 0x00\ \},\ \textcolor{comment}{//\ 3b\ ;}}
+\DoxyCodeLine{00032\ \ \ \ \ \{\ 0x08,\ 0x14,\ 0x22,\ 0x41,\ 0x00\ \},\ \textcolor{comment}{//\ 3c\ <}}
+\DoxyCodeLine{00033\ \ \ \ \ \{\ 0x14,\ 0x14,\ 0x14,\ 0x14,\ 0x14\ \},\ \textcolor{comment}{//\ 3d\ =}}
+\DoxyCodeLine{00034\ \ \ \ \ \{\ 0x00,\ 0x41,\ 0x22,\ 0x14,\ 0x08\ \},\ \textcolor{comment}{//\ 3e\ >}}
+\DoxyCodeLine{00035\ \ \ \ \ \{\ 0x02,\ 0x01,\ 0x51,\ 0x09,\ 0x06\ \},\ \textcolor{comment}{//\ 3f\ ?}}
+\DoxyCodeLine{00036\ \ \ \ \ \{\ 0x32,\ 0x49,\ 0x79,\ 0x41,\ 0x3e\ \},\ \textcolor{comment}{//\ 40\ @}}
+\DoxyCodeLine{00037\ \ \ \ \ \{\ 0x7e,\ 0x11,\ 0x11,\ 0x11,\ 0x7e\ \},\ \textcolor{comment}{//\ 41\ A}}
+\DoxyCodeLine{00038\ \ \ \ \ \{\ 0x7f,\ 0x49,\ 0x49,\ 0x49,\ 0x36\ \},\ \textcolor{comment}{//\ 42\ B}}
+\DoxyCodeLine{00039\ \ \ \ \ \{\ 0x3e,\ 0x41,\ 0x41,\ 0x41,\ 0x22\ \},\ \textcolor{comment}{//\ 43\ C}}
+\DoxyCodeLine{00040\ \ \ \ \ \{\ 0x7f,\ 0x41,\ 0x41,\ 0x22,\ 0x1c\ \},\ \textcolor{comment}{//\ 44\ D}}
+\DoxyCodeLine{00041\ \ \ \ \ \{\ 0x7f,\ 0x49,\ 0x49,\ 0x49,\ 0x41\ \},\ \textcolor{comment}{//\ 45\ E}}
+\DoxyCodeLine{00042\ \ \ \ \ \{\ 0x7f,\ 0x09,\ 0x09,\ 0x09,\ 0x01\ \},\ \textcolor{comment}{//\ 46\ F}}
+\DoxyCodeLine{00043\ \ \ \ \ \{\ 0x3e,\ 0x41,\ 0x49,\ 0x49,\ 0x7a\ \},\ \textcolor{comment}{//\ 47\ G}}
+\DoxyCodeLine{00044\ \ \ \ \ \{\ 0x7f,\ 0x08,\ 0x08,\ 0x08,\ 0x7f\ \},\ \textcolor{comment}{//\ 48\ H}}
+\DoxyCodeLine{00045\ \ \ \ \ \{\ 0x00,\ 0x41,\ 0x7f,\ 0x41,\ 0x00\ \},\ \textcolor{comment}{//\ 49\ I}}
+\DoxyCodeLine{00046\ \ \ \ \ \{\ 0x20,\ 0x40,\ 0x41,\ 0x3f,\ 0x01\ \},\ \textcolor{comment}{//\ 4a\ J}}
+\DoxyCodeLine{00047\ \ \ \ \ \{\ 0x7f,\ 0x08,\ 0x14,\ 0x22,\ 0x41\ \},\ \textcolor{comment}{//\ 4b\ K}}
+\DoxyCodeLine{00048\ \ \ \ \ \{\ 0x7f,\ 0x40,\ 0x40,\ 0x40,\ 0x40\ \},\ \textcolor{comment}{//\ 4c\ L}}
+\DoxyCodeLine{00049\ \ \ \ \ \{\ 0x7f,\ 0x02,\ 0x0c,\ 0x02,\ 0x7f\ \},\ \textcolor{comment}{//\ 4d\ M}}
+\DoxyCodeLine{00050\ \ \ \ \ \{\ 0x7f,\ 0x04,\ 0x08,\ 0x10,\ 0x7f\ \},\ \textcolor{comment}{//\ 4e\ N}}
+\DoxyCodeLine{00051\ \ \ \ \ \{\ 0x3e,\ 0x41,\ 0x41,\ 0x41,\ 0x3e\ \},\ \textcolor{comment}{//\ 4f\ O}}
+\DoxyCodeLine{00052\ \ \ \ \ \{\ 0x7f,\ 0x09,\ 0x09,\ 0x09,\ 0x06\ \},\ \textcolor{comment}{//\ 50\ P}}
+\DoxyCodeLine{00053\ \ \ \ \ \{\ 0x3e,\ 0x41,\ 0x51,\ 0x21,\ 0x5e\ \},\ \textcolor{comment}{//\ 51\ Q}}
+\DoxyCodeLine{00054\ \ \ \ \ \{\ 0x7f,\ 0x09,\ 0x19,\ 0x29,\ 0x46\ \},\ \textcolor{comment}{//\ 52\ R}}
+\DoxyCodeLine{00055\ \ \ \ \ \{\ 0x46,\ 0x49,\ 0x49,\ 0x49,\ 0x31\ \},\ \textcolor{comment}{//\ 53\ S}}
+\DoxyCodeLine{00056\ \ \ \ \ \{\ 0x01,\ 0x01,\ 0x7f,\ 0x01,\ 0x01\ \},\ \textcolor{comment}{//\ 54\ T}}
+\DoxyCodeLine{00057\ \ \ \ \ \{\ 0x3f,\ 0x40,\ 0x40,\ 0x40,\ 0x3f\ \},\ \textcolor{comment}{//\ 55\ U}}
+\DoxyCodeLine{00058\ \ \ \ \ \{\ 0x1f,\ 0x20,\ 0x40,\ 0x20,\ 0x1f\ \},\ \textcolor{comment}{//\ 56\ V}}
+\DoxyCodeLine{00059\ \ \ \ \ \{\ 0x3f,\ 0x40,\ 0x38,\ 0x40,\ 0x3f\ \},\ \textcolor{comment}{//\ 57\ W}}
+\DoxyCodeLine{00060\ \ \ \ \ \{\ 0x63,\ 0x14,\ 0x08,\ 0x14,\ 0x63\ \},\ \textcolor{comment}{//\ 58\ X}}
+\DoxyCodeLine{00061\ \ \ \ \ \{\ 0x07,\ 0x08,\ 0x70,\ 0x08,\ 0x07\ \},\ \textcolor{comment}{//\ 59\ Y}}
+\DoxyCodeLine{00062\ \ \ \ \ \{\ 0x61,\ 0x51,\ 0x49,\ 0x45,\ 0x43\ \},\ \textcolor{comment}{//\ 5a\ Z}}
+\DoxyCodeLine{00063\ \ \ \ \ \{\ 0x00,\ 0x7f,\ 0x41,\ 0x41,\ 0x00\ \},\ \textcolor{comment}{//\ 5b\ [}}
+\DoxyCodeLine{00064\ \ \ \ \ \{\ 0x02,\ 0x04,\ 0x08,\ 0x10,\ 0x20\ \},\ \textcolor{comment}{//\ 5c\ backslash}}
+\DoxyCodeLine{00065\ \ \ \ \ \{\ 0x00,\ 0x41,\ 0x41,\ 0x7f,\ 0x00\ \},\ \textcolor{comment}{//\ 5d\ ]}}
+\DoxyCodeLine{00066\ \ \ \ \ \{\ 0x04,\ 0x02,\ 0x01,\ 0x02,\ 0x04\ \},\ \textcolor{comment}{//\ 5e\ \string^}}
+\DoxyCodeLine{00067\ \ \ \ \ \{\ 0x40,\ 0x40,\ 0x40,\ 0x40,\ 0x40\ \},\ \textcolor{comment}{//\ 5f\ \_}}
+\DoxyCodeLine{00068\ \ \ \ \ \{\ 0x00,\ 0x01,\ 0x02,\ 0x04,\ 0x00\ \},\ \textcolor{comment}{//\ 60\ \`{}}}
+\DoxyCodeLine{00069\ \ \ \ \ \{\ 0x20,\ 0x54,\ 0x54,\ 0x54,\ 0x78\ \},\ \textcolor{comment}{//\ 61\ a}}
+\DoxyCodeLine{00070\ \ \ \ \ \{\ 0x7f,\ 0x48,\ 0x44,\ 0x44,\ 0x38\ \},\ \textcolor{comment}{//\ 62\ b}}
+\DoxyCodeLine{00071\ \ \ \ \ \{\ 0x38,\ 0x44,\ 0x44,\ 0x44,\ 0x20\ \},\ \textcolor{comment}{//\ 63\ c}}
+\DoxyCodeLine{00072\ \ \ \ \ \{\ 0x38,\ 0x44,\ 0x44,\ 0x48,\ 0x7f\ \},\ \textcolor{comment}{//\ 64\ d}}
+\DoxyCodeLine{00073\ \ \ \ \ \{\ 0x38,\ 0x54,\ 0x54,\ 0x54,\ 0x18\ \},\ \textcolor{comment}{//\ 65\ e}}
+\DoxyCodeLine{00074\ \ \ \ \ \{\ 0x08,\ 0x7e,\ 0x09,\ 0x01,\ 0x02\ \},\ \textcolor{comment}{//\ 66\ f}}
+\DoxyCodeLine{00075\ \ \ \ \ \{\ 0x0c,\ 0x52,\ 0x52,\ 0x52,\ 0x3e\ \},\ \textcolor{comment}{//\ 67\ g}}
+\DoxyCodeLine{00076\ \ \ \ \ \{\ 0x7f,\ 0x08,\ 0x04,\ 0x04,\ 0x78\ \},\ \textcolor{comment}{//\ 68\ h}}
+\DoxyCodeLine{00077\ \ \ \ \ \{\ 0x00,\ 0x44,\ 0x7d,\ 0x40,\ 0x00\ \},\ \textcolor{comment}{//\ 69\ i}}
+\DoxyCodeLine{00078\ \ \ \ \ \{\ 0x20,\ 0x40,\ 0x44,\ 0x3d,\ 0x00\ \},\ \textcolor{comment}{//\ 6a\ j}}
+\DoxyCodeLine{00079\ \ \ \ \ \{\ 0x7f,\ 0x10,\ 0x28,\ 0x44,\ 0x00\ \},\ \textcolor{comment}{//\ 6b\ k}}
+\DoxyCodeLine{00080\ \ \ \ \ \{\ 0x00,\ 0x41,\ 0x7f,\ 0x40,\ 0x00\ \},\ \textcolor{comment}{//\ 6c\ l}}
+\DoxyCodeLine{00081\ \ \ \ \ \{\ 0x7c,\ 0x04,\ 0x18,\ 0x04,\ 0x78\ \},\ \textcolor{comment}{//\ 6d\ m}}
+\DoxyCodeLine{00082\ \ \ \ \ \{\ 0x7c,\ 0x08,\ 0x04,\ 0x04,\ 0x78\ \},\ \textcolor{comment}{//\ 6e\ n}}
+\DoxyCodeLine{00083\ \ \ \ \ \{\ 0x38,\ 0x44,\ 0x44,\ 0x44,\ 0x38\ \},\ \textcolor{comment}{//\ 6f\ o}}
+\DoxyCodeLine{00084\ \ \ \ \ \{\ 0x7c,\ 0x14,\ 0x14,\ 0x14,\ 0x08\ \},\ \textcolor{comment}{//\ 70\ p}}
+\DoxyCodeLine{00085\ \ \ \ \ \{\ 0x08,\ 0x14,\ 0x14,\ 0x18,\ 0x7c\ \},\ \textcolor{comment}{//\ 71\ q}}
+\DoxyCodeLine{00086\ \ \ \ \ \{\ 0x7c,\ 0x08,\ 0x04,\ 0x04,\ 0x08\ \},\ \textcolor{comment}{//\ 72\ r}}
+\DoxyCodeLine{00087\ \ \ \ \ \{\ 0x48,\ 0x54,\ 0x54,\ 0x54,\ 0x20\ \},\ \textcolor{comment}{//\ 73\ s}}
+\DoxyCodeLine{00088\ \ \ \ \ \{\ 0x04,\ 0x3f,\ 0x44,\ 0x40,\ 0x20\ \},\ \textcolor{comment}{//\ 74\ t}}
+\DoxyCodeLine{00089\ \ \ \ \ \{\ 0x3c,\ 0x40,\ 0x40,\ 0x20,\ 0x7c\ \},\ \textcolor{comment}{//\ 75\ u}}
+\DoxyCodeLine{00090\ \ \ \ \ \{\ 0x1c,\ 0x20,\ 0x40,\ 0x20,\ 0x1c\ \},\ \textcolor{comment}{//\ 76\ v}}
+\DoxyCodeLine{00091\ \ \ \ \ \{\ 0x3c,\ 0x40,\ 0x30,\ 0x40,\ 0x3c\ \},\ \textcolor{comment}{//\ 77\ w}}
+\DoxyCodeLine{00092\ \ \ \ \ \{\ 0x44,\ 0x28,\ 0x10,\ 0x28,\ 0x44\ \},\ \textcolor{comment}{//\ 78\ x}}
+\DoxyCodeLine{00093\ \ \ \ \ \{\ 0x0c,\ 0x50,\ 0x50,\ 0x50,\ 0x3c\ \},\ \textcolor{comment}{//\ 79\ y}}
+\DoxyCodeLine{00094\ \ \ \ \ \{\ 0x44,\ 0x64,\ 0x54,\ 0x4c,\ 0x44\ \},\ \textcolor{comment}{//\ 7a\ z}}
+\DoxyCodeLine{00095\ \ \ \ \ \{\ 0x00,\ 0x08,\ 0x36,\ 0x41,\ 0x00\ \},\ \textcolor{comment}{//\ 7b\ \{}}
+\DoxyCodeLine{00096\ \ \ \ \ \{\ 0x00,\ 0x00,\ 0x7f,\ 0x00,\ 0x00\ \},\ \textcolor{comment}{//\ 7c\ |}}
+\DoxyCodeLine{00097\ \ \ \ \ \{\ 0x00,\ 0x41,\ 0x36,\ 0x08,\ 0x00\ \},\ \textcolor{comment}{//\ 7d\ \}}}
+\DoxyCodeLine{00098\ \ \ \ \ \{\ 0x10,\ 0x08,\ 0x08,\ 0x10,\ 0x08\ \},\ \textcolor{comment}{//\ 7e\ \string~}}
+\DoxyCodeLine{00099\ \ \ \ \ \{\ 0x00,\ 0x00,\ 0x00,\ 0x00,\ 0x00\ \}\ \textcolor{comment}{//\ 7f}}
+\DoxyCodeLine{00100\ \};}
+
+\end{DoxyCode}

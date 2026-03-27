@@ -1,0 +1,117 @@
+\doxysection{nokia5110.\+h File Reference}
+\hypertarget{nokia5110_8h}{}\label{nokia5110_8h}\index{nokia5110.h@{nokia5110.h}}
+{\ttfamily \#include $<$avr/pgmspace.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{nokia5110_8h_a5763bc171c4e218f2ee88e09315e3753}{PORT\+\_\+\+LCD}}~PORTB
+\item 
+\#define \mbox{\hyperlink{nokia5110_8h_af60a3f34cba69bf5454950bb7fda7c85}{DDR\+\_\+\+LCD}}~DDRB
+\item 
+\#define \mbox{\hyperlink{nokia5110_8h_a3b5cbdf811a027ce7ca6582eb0d10da6}{LCD\+\_\+\+SCE}}~PB1
+\item 
+\#define \mbox{\hyperlink{nokia5110_8h_aec0f0ab242f1b58b1d017bc9ab4b898b}{LCD\+\_\+\+RST}}~PB2
+\item 
+\#define \mbox{\hyperlink{nokia5110_8h_a1dc6c4886242abf4447d0da651125d5d}{LCD\+\_\+\+DC}}~PB3
+\item 
+\#define \mbox{\hyperlink{nokia5110_8h_a5b653539dd420dc358c191f2d87b502a}{LCD\+\_\+\+DIN}}~PB4
+\item 
+\#define \mbox{\hyperlink{nokia5110_8h_af770c0e3a25e84fe6a2b7fb1efa85ab4}{LCD\+\_\+\+CLK}}~PB5
+\item 
+\#define \mbox{\hyperlink{nokia5110_8h_a2fccda530baf3b213f677249fd7ce6e7}{LCD\+\_\+\+CONTRAST}}~0x40
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{nokia5110_8h_a23be879b43e8bf72168ba41c97e7c8b2}{nokia\+\_\+lcd\+\_\+init}} (void)
+\item 
+void \mbox{\hyperlink{nokia5110_8h_aed25e6fe66335f4a58a26151eeedb08a}{nokia\+\_\+lcd\+\_\+clear}} (void)
+\item 
+void \mbox{\hyperlink{nokia5110_8h_a817c37acf5475cbde7121d4f29f3c60f}{nokia\+\_\+lcd\+\_\+power}} (uint8\+\_\+t on)
+\item 
+void \mbox{\hyperlink{nokia5110_8h_abc49cfe5b2c76fbdb9cbfdf12ad1d705}{nokia\+\_\+lcd\+\_\+set\+\_\+pixel}} (uint8\+\_\+t x, uint8\+\_\+t y, uint8\+\_\+t value)
+\end{DoxyCompactItemize}
+
+
+\label{doc-define-members}
+\Hypertarget{nokia5110_8h_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{nokia5110_8h_af60a3f34cba69bf5454950bb7fda7c85}\index{nokia5110.h@{nokia5110.h}!DDR\_LCD@{DDR\_LCD}}
+\index{DDR\_LCD@{DDR\_LCD}!nokia5110.h@{nokia5110.h}}
+\doxysubsubsection{\texorpdfstring{DDR\_LCD}{DDR\_LCD}}
+{\footnotesize\ttfamily \label{nokia5110_8h_af60a3f34cba69bf5454950bb7fda7c85} 
+\#define DDR\+\_\+\+LCD~DDRB}
+
+\Hypertarget{nokia5110_8h_af770c0e3a25e84fe6a2b7fb1efa85ab4}\index{nokia5110.h@{nokia5110.h}!LCD\_CLK@{LCD\_CLK}}
+\index{LCD\_CLK@{LCD\_CLK}!nokia5110.h@{nokia5110.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_CLK}{LCD\_CLK}}
+{\footnotesize\ttfamily \label{nokia5110_8h_af770c0e3a25e84fe6a2b7fb1efa85ab4} 
+\#define LCD\+\_\+\+CLK~PB5}
+
+\Hypertarget{nokia5110_8h_a2fccda530baf3b213f677249fd7ce6e7}\index{nokia5110.h@{nokia5110.h}!LCD\_CONTRAST@{LCD\_CONTRAST}}
+\index{LCD\_CONTRAST@{LCD\_CONTRAST}!nokia5110.h@{nokia5110.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_CONTRAST}{LCD\_CONTRAST}}
+{\footnotesize\ttfamily \label{nokia5110_8h_a2fccda530baf3b213f677249fd7ce6e7} 
+\#define LCD\+\_\+\+CONTRAST~0x40}
+
+\Hypertarget{nokia5110_8h_a1dc6c4886242abf4447d0da651125d5d}\index{nokia5110.h@{nokia5110.h}!LCD\_DC@{LCD\_DC}}
+\index{LCD\_DC@{LCD\_DC}!nokia5110.h@{nokia5110.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_DC}{LCD\_DC}}
+{\footnotesize\ttfamily \label{nokia5110_8h_a1dc6c4886242abf4447d0da651125d5d} 
+\#define LCD\+\_\+\+DC~PB3}
+
+\Hypertarget{nokia5110_8h_a5b653539dd420dc358c191f2d87b502a}\index{nokia5110.h@{nokia5110.h}!LCD\_DIN@{LCD\_DIN}}
+\index{LCD\_DIN@{LCD\_DIN}!nokia5110.h@{nokia5110.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_DIN}{LCD\_DIN}}
+{\footnotesize\ttfamily \label{nokia5110_8h_a5b653539dd420dc358c191f2d87b502a} 
+\#define LCD\+\_\+\+DIN~PB4}
+
+\Hypertarget{nokia5110_8h_aec0f0ab242f1b58b1d017bc9ab4b898b}\index{nokia5110.h@{nokia5110.h}!LCD\_RST@{LCD\_RST}}
+\index{LCD\_RST@{LCD\_RST}!nokia5110.h@{nokia5110.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_RST}{LCD\_RST}}
+{\footnotesize\ttfamily \label{nokia5110_8h_aec0f0ab242f1b58b1d017bc9ab4b898b} 
+\#define LCD\+\_\+\+RST~PB2}
+
+\Hypertarget{nokia5110_8h_a3b5cbdf811a027ce7ca6582eb0d10da6}\index{nokia5110.h@{nokia5110.h}!LCD\_SCE@{LCD\_SCE}}
+\index{LCD\_SCE@{LCD\_SCE}!nokia5110.h@{nokia5110.h}}
+\doxysubsubsection{\texorpdfstring{LCD\_SCE}{LCD\_SCE}}
+{\footnotesize\ttfamily \label{nokia5110_8h_a3b5cbdf811a027ce7ca6582eb0d10da6} 
+\#define LCD\+\_\+\+SCE~PB1}
+
+\Hypertarget{nokia5110_8h_a5763bc171c4e218f2ee88e09315e3753}\index{nokia5110.h@{nokia5110.h}!PORT\_LCD@{PORT\_LCD}}
+\index{PORT\_LCD@{PORT\_LCD}!nokia5110.h@{nokia5110.h}}
+\doxysubsubsection{\texorpdfstring{PORT\_LCD}{PORT\_LCD}}
+{\footnotesize\ttfamily \label{nokia5110_8h_a5763bc171c4e218f2ee88e09315e3753} 
+\#define PORT\+\_\+\+LCD~PORTB}
+
+
+
+\label{doc-func-members}
+\Hypertarget{nokia5110_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{nokia5110_8h_aed25e6fe66335f4a58a26151eeedb08a}\index{nokia5110.h@{nokia5110.h}!nokia\_lcd\_clear@{nokia\_lcd\_clear}}
+\index{nokia\_lcd\_clear@{nokia\_lcd\_clear}!nokia5110.h@{nokia5110.h}}
+\doxysubsubsection{\texorpdfstring{nokia\_lcd\_clear()}{nokia\_lcd\_clear()}}
+{\footnotesize\ttfamily \label{nokia5110_8h_aed25e6fe66335f4a58a26151eeedb08a} 
+void nokia\+\_\+lcd\+\_\+clear (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{nokia5110_8h_a23be879b43e8bf72168ba41c97e7c8b2}\index{nokia5110.h@{nokia5110.h}!nokia\_lcd\_init@{nokia\_lcd\_init}}
+\index{nokia\_lcd\_init@{nokia\_lcd\_init}!nokia5110.h@{nokia5110.h}}
+\doxysubsubsection{\texorpdfstring{nokia\_lcd\_init()}{nokia\_lcd\_init()}}
+{\footnotesize\ttfamily \label{nokia5110_8h_a23be879b43e8bf72168ba41c97e7c8b2} 
+void nokia\+\_\+lcd\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{nokia5110_8h_a817c37acf5475cbde7121d4f29f3c60f}\index{nokia5110.h@{nokia5110.h}!nokia\_lcd\_power@{nokia\_lcd\_power}}
+\index{nokia\_lcd\_power@{nokia\_lcd\_power}!nokia5110.h@{nokia5110.h}}
+\doxysubsubsection{\texorpdfstring{nokia\_lcd\_power()}{nokia\_lcd\_power()}}
+{\footnotesize\ttfamily \label{nokia5110_8h_a817c37acf5475cbde7121d4f29f3c60f} 
+void nokia\+\_\+lcd\+\_\+power (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{on}{}\end{DoxyParamCaption})}
+
+Power of display @lcd\+: lcd nokia struct @on\+: 1 -\/ on; 0 -\/ off; \Hypertarget{nokia5110_8h_abc49cfe5b2c76fbdb9cbfdf12ad1d705}\index{nokia5110.h@{nokia5110.h}!nokia\_lcd\_set\_pixel@{nokia\_lcd\_set\_pixel}}
+\index{nokia\_lcd\_set\_pixel@{nokia\_lcd\_set\_pixel}!nokia5110.h@{nokia5110.h}}
+\doxysubsubsection{\texorpdfstring{nokia\_lcd\_set\_pixel()}{nokia\_lcd\_set\_pixel()}}
+{\footnotesize\ttfamily \label{nokia5110_8h_abc49cfe5b2c76fbdb9cbfdf12ad1d705} 
+void nokia\+\_\+lcd\+\_\+set\+\_\+pixel (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{x}{, }\item[{uint8\+\_\+t}]{y}{, }\item[{uint8\+\_\+t}]{value}{}\end{DoxyParamCaption})}
+
+Set single pixel @x\+: horizontal pozition @y\+: vertical position @value\+: show/hide pixel 

@@ -1,0 +1,41 @@
+<circuit version="1.1.0-SR1" rev="2005" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="MCU" CircId="mega328-1" mainComp="false" Show_id="true" Show_Val="false" Pos="228,-44" rotation="270" hflip="-1" vflip="1" label="mega328-1" idLabPos="-15.1121,-15.004" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" Program="../AVR/.pio/build/uno/firmware.hex" Auto_Load="true" saveEepr="true" Logic_Symbol="false" Rst_enabled="false" Ext_Osc="false" Wdt_enabled="false" Clk_Out="false" MainMcu="true" SerialMon="-1" />
+
+<item itemtype="Pcd8544" CircId="Pcd8544-8" mainComp="false" Show_id="true" Show_Val="false" Pos="168,-152" rotation="0" hflip="1" vflip="1" label="Pcd8544-8" idLabPos="-19.3073,-67.3599" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Push" CircId="Push-14" mainComp="false" Show_id="false" Show_Val="false" Pos="208,-16" rotation="0" hflip="1" vflip="1" label="Push-14" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" Poles="1" />
+
+<item itemtype="Push" CircId="Push-15" mainComp="false" Show_id="false" Show_Val="false" Pos="136,-16" rotation="0" hflip="1" vflip="1" label="Push-15" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Norm_Close="false" Poles="1" />
+
+<item itemtype="Ground" CircId="Ground-17" mainComp="false" Show_id="false" Show_Val="false" Pos="172,20" rotation="0" hflip="1" vflip="1" label="Ground-17" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Ellipse" CircId="Ellipse-29" mainComp="false" Show_id="false" Show_Val="false" Pos="208,-4" rotation="0" hflip="1" vflip="1" label="Ellipse-29" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" H_size="30 _px" V_size="30 _px" Border="5 _px" Z_Value="-1" Color="#a0a0a4" Opacity="1" />
+
+<item itemtype="Ellipse" CircId="Ellipse-30" mainComp="false" Show_id="false" Show_Val="false" Pos="136,-4" rotation="0" hflip="1" vflip="1" label="Ellipse-30" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" H_size="30 _px" V_size="30 _px" Border="5 _px" Z_Value="-1" Color="#a0a0a4" Opacity="1" />
+
+<item itemtype="Rectangle" CircId="Rectangle-34" mainComp="false" Show_id="false" Show_Val="false" Pos="168,-96" rotation="0" hflip="1" vflip="1" label="Rectangle-34" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" H_size="150 _px" V_size="250 _px" Border="2 _px" Z_Value="-2" Color="#a0a0a4" Opacity="1" />
+
+<item itemtype="Node" CircId="Node-35" mainComp="false" Pos="172,-16" />
+
+<item itemtype="Connector" uid="Connector-54" startpinid="mega328-1-PORTD7" endpinid="Push-15-pinP0" pointList="124,-36,124,-16,120,-16" />
+
+<item itemtype="Connector" uid="Connector-55" startpinid="mega328-1-PORTD6" endpinid="Push-14-switch0pinN" pointList="132,-36,132,-24,224,-24,224,-16" />
+
+<item itemtype="Connector" uid="Connector-58" startpinid="mega328-1-PORTB4" endpinid="Pcd8544-8-PinSi" pointList="140,-84,140,-96,184,-96,184,-112" />
+
+<item itemtype="Connector" uid="Connector-59" startpinid="mega328-1-PORTB5" endpinid="Pcd8544-8-PinScl" pointList="148,-84,148,-92,200,-92,200,-112" />
+
+<item itemtype="Connector" uid="Connector-60" startpinid="mega328-1-PORTB2" endpinid="Pcd8544-8-PinRst" pointList="124,-84,124,-112,136,-112" />
+
+<item itemtype="Connector" uid="Connector-64" startpinid="mega328-1-PORTB3" endpinid="Pcd8544-8-PinDc" pointList="132,-84,132,-100,168,-100,168,-112" />
+
+<item itemtype="Connector" uid="Connector-65" startpinid="mega328-1-PORTB1" endpinid="Pcd8544-8-PinCs" pointList="116,-84,116,-104,152,-104,152,-112" />
+
+<item itemtype="Connector" uid="Connector-76" startpinid="Ground-17-Gnd" endpinid="Node-35-1" pointList="172,4,172,-16" />
+
+<item itemtype="Connector" uid="Connector-77" startpinid="Push-15-switch0pinN" endpinid="Node-35-0" pointList="152,-16,172,-16" />
+
+<item itemtype="Connector" uid="Connector-78" startpinid="Node-35-2" endpinid="Push-14-pinP0" pointList="172,-16,192,-16" />
+
+</circuit>

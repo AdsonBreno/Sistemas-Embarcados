@@ -1,0 +1,267 @@
+\doxysection{game\+Prototype.\+c File Reference}
+\hypertarget{gamePrototype_8c}{}\label{gamePrototype_8c}\index{gamePrototype.c@{gamePrototype.c}}
+{\ttfamily \#include $<$avr/io.\+h$>$}\newline
+{\ttfamily \#include $<$avr/interrupt.\+h$>$}\newline
+{\ttfamily \#include $<$util/delay.\+h$>$}\newline
+{\ttfamily \#include "{}nokia5110.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{gamePrototype_8c_a43bafb28b29491ec7f871319b5a3b2f8}{F\+\_\+\+CPU}}~16000000\+UL
+\begin{DoxyCompactList}\small\item\em Frequência principal do clock do microcontrolador (16 MHz). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Parâmetros do Terreno}\par
+{\em Definição de parâmetros para a criação e renderização do terreno procedural. }\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{gamePrototype_8c_ae2d3a48fb01bbc0fe795724379434d05}{AMPLITUDE}}~20
+\begin{DoxyCompactList}\small\item\em Altura máxima do morro (em pixels). \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{gamePrototype_8c_a21005f9f4e2ce7597c5eb4351816d7e2}{OFFSET}}~35
+\begin{DoxyCompactList}\small\item\em Base (nível do mar) do terreno na tela. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{gamePrototype_8c_a84142cd3e3bf14c4ecd4b6707a808c39}{FREQUENCY}}~4
+\begin{DoxyCompactList}\small\item\em Frequência do padrão do terreno (menor valor = mais denso). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{gamePrototype_8c_ab0c72913370e4b94fdd46b0db50b506c}{Get\+\_\+\+Terrain\+\_\+Y}} (uint16\+\_\+t x\+\_\+pos)
+\begin{DoxyCompactList}\small\item\em Calcula a coordenada Y (altura) do terreno para uma dada posição X. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{gamePrototype_8c_ae10080976962976f3aa1bdca7d4d9f8e}{mover}} ()
+\begin{DoxyCompactList}\small\item\em Atualiza a velocidade de movimento e o deslocamento do terreno. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{gamePrototype_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\begin{DoxyCompactList}\small\item\em Função principal do programa. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const uint8\+\_\+t COS\+\_\+\+TABLE\mbox{[}36\mbox{]} \mbox{\hyperlink{gamePrototype_8c_a89227fb3608a6062dbfe97170f6fb225}{PROGMEM}}
+\begin{DoxyCompactList}\small\item\em Tabela de Cossenos escalonada. \end{DoxyCompactList}\item 
+const uint8\+\_\+t \mbox{\hyperlink{gamePrototype_8c_a0a0d4ec4767823f46441fd047fe67a50}{BUTTON}} \mbox{[}$\,$\mbox{]} = \{6,7\}
+\begin{DoxyCompactList}\small\item\em Pinos do PORTD mapeados para os botões. 7 para acelerador e 6 para freiar. \end{DoxyCompactList}\item 
+const uint16\+\_\+t \mbox{\hyperlink{gamePrototype_8c_aef60943cf81aefd3049a4631b9cf2ffb}{lama}} \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em Bitmap para textura de Lama. Ainda não foi aplicado. \end{DoxyCompactList}\item 
+const uint16\+\_\+t \mbox{\hyperlink{gamePrototype_8c_abfb959d389b7646d487611b1071c76f9}{baja}} \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em Bitmap do baja. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Variáveis de Estado Global}\par
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{gamePrototype_8c_a52cfa45d5d52d8b68b29b1bea811c044}{terreno}} = 0
+\begin{DoxyCompactList}\small\item\em Posição horizontal atual do terreno (usada para rolagem). \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{gamePrototype_8c_a9d7e51b8a2c199589fb540134709ab89}{move}} = 0
+\begin{DoxyCompactList}\small\item\em Velocidade de movimento atual do jogador (aceleração). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\label{doc-define-members}
+\Hypertarget{gamePrototype_8c_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{gamePrototype_8c_ae2d3a48fb01bbc0fe795724379434d05}\index{gamePrototype.c@{gamePrototype.c}!AMPLITUDE@{AMPLITUDE}}
+\index{AMPLITUDE@{AMPLITUDE}!gamePrototype.c@{gamePrototype.c}}
+\doxysubsubsection{\texorpdfstring{AMPLITUDE}{AMPLITUDE}}
+{\footnotesize\ttfamily \label{gamePrototype_8c_ae2d3a48fb01bbc0fe795724379434d05} 
+\#define AMPLITUDE~20}
+
+
+
+Altura máxima do morro (em pixels). 
+
+\Hypertarget{gamePrototype_8c_a43bafb28b29491ec7f871319b5a3b2f8}\index{gamePrototype.c@{gamePrototype.c}!F\_CPU@{F\_CPU}}
+\index{F\_CPU@{F\_CPU}!gamePrototype.c@{gamePrototype.c}}
+\doxysubsubsection{\texorpdfstring{F\_CPU}{F\_CPU}}
+{\footnotesize\ttfamily \label{gamePrototype_8c_a43bafb28b29491ec7f871319b5a3b2f8} 
+\#define F\+\_\+\+CPU~16000000\+UL}
+
+
+
+Frequência principal do clock do microcontrolador (16 MHz). 
+
+\Hypertarget{gamePrototype_8c_a84142cd3e3bf14c4ecd4b6707a808c39}\index{gamePrototype.c@{gamePrototype.c}!FREQUENCY@{FREQUENCY}}
+\index{FREQUENCY@{FREQUENCY}!gamePrototype.c@{gamePrototype.c}}
+\doxysubsubsection{\texorpdfstring{FREQUENCY}{FREQUENCY}}
+{\footnotesize\ttfamily \label{gamePrototype_8c_a84142cd3e3bf14c4ecd4b6707a808c39} 
+\#define FREQUENCY~4}
+
+
+
+Frequência do padrão do terreno (menor valor = mais denso). 
+
+\Hypertarget{gamePrototype_8c_a21005f9f4e2ce7597c5eb4351816d7e2}\index{gamePrototype.c@{gamePrototype.c}!OFFSET@{OFFSET}}
+\index{OFFSET@{OFFSET}!gamePrototype.c@{gamePrototype.c}}
+\doxysubsubsection{\texorpdfstring{OFFSET}{OFFSET}}
+{\footnotesize\ttfamily \label{gamePrototype_8c_a21005f9f4e2ce7597c5eb4351816d7e2} 
+\#define OFFSET~35}
+
+
+
+Base (nível do mar) do terreno na tela. 
+
+
+
+\label{doc-func-members}
+\Hypertarget{gamePrototype_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{gamePrototype_8c_ab0c72913370e4b94fdd46b0db50b506c}\index{gamePrototype.c@{gamePrototype.c}!Get\_Terrain\_Y@{Get\_Terrain\_Y}}
+\index{Get\_Terrain\_Y@{Get\_Terrain\_Y}!gamePrototype.c@{gamePrototype.c}}
+\doxysubsubsection{\texorpdfstring{Get\_Terrain\_Y()}{Get\_Terrain\_Y()}}
+{\footnotesize\ttfamily \label{gamePrototype_8c_ab0c72913370e4b94fdd46b0db50b506c} 
+uint8\+\_\+t Get\+\_\+\+Terrain\+\_\+Y (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x\+\_\+pos}{}\end{DoxyParamCaption})}
+
+
+
+Calcula a coordenada Y (altura) do terreno para uma dada posição X. 
+
+Usa a tabela de cossenos precalculada para gerar a altura de forma procedural e aplica a aceleração e o offset vertical (OFFSET).
+
+
+\begin{DoxyParams}{Parameters}
+{\em x\+\_\+pos} & Posição X na tela (coordenada de 0 a 83). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna a coordenada Y na tela onde o terreno deve começar a ser desenhado. 
+\end{DoxyReturn}
+\Hypertarget{gamePrototype_8c_a840291bc02cba5474a4cb46a9b9566fe}\index{gamePrototype.c@{gamePrototype.c}!main@{main}}
+\index{main@{main}!gamePrototype.c@{gamePrototype.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{gamePrototype_8c_a840291bc02cba5474a4cb46a9b9566fe} 
+int main (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Função principal do programa. 
+
+Inicializa o LCD Nokia 5110 e entra no loop principal do jogo, lidando com o desenho do terreno, movimento e atualização do score.
+
+\begin{DoxyNote}{Note}
+Este código é destinado a microcontroladores AVR. 
+\end{DoxyNote}
+\begin{DoxyReturn}{Returns}
+Retorna 0 (nunca alcançado no loop infinito de um MCU). 
+\end{DoxyReturn}
+
+\begin{DoxyEnumerate}
+\item DESENHO PROCEDURAL DO TERRENO (ADICIONADO)
+\end{DoxyEnumerate}
+
+Calcula a altura Y para cada coluna, deslocada pelo offset
+
+Desenha pixels do y\+\_\+coord até o final da tela (47)
+
+Apaga (Buraco / Textura)
+
+Escreve o valor do score\Hypertarget{gamePrototype_8c_ae10080976962976f3aa1bdca7d4d9f8e}\index{gamePrototype.c@{gamePrototype.c}!mover@{mover}}
+\index{mover@{mover}!gamePrototype.c@{gamePrototype.c}}
+\doxysubsubsection{\texorpdfstring{mover()}{mover()}}
+{\footnotesize\ttfamily \label{gamePrototype_8c_ae10080976962976f3aa1bdca7d4d9f8e} 
+void mover (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Atualiza a velocidade de movimento e o deslocamento do terreno. 
+
+Lida com a aceleração/desaceleração baseada na leitura do botão de entrada mapeado no pino BUTTON\mbox{[}1\mbox{]}. Segurar o acelerador aumenta a velocidade até o limite definido abaixo. Soltar o acelerador desacelera. 
+
+\label{doc-var-members}
+\Hypertarget{gamePrototype_8c_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{gamePrototype_8c_abfb959d389b7646d487611b1071c76f9}\index{gamePrototype.c@{gamePrototype.c}!baja@{baja}}
+\index{baja@{baja}!gamePrototype.c@{gamePrototype.c}}
+\doxysubsubsection{\texorpdfstring{baja}{baja}}
+{\footnotesize\ttfamily \label{gamePrototype_8c_abfb959d389b7646d487611b1071c76f9} 
+const uint16\+\_\+t baja\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ 0b0000011111000001,}
+\DoxyCodeLine{\ \ \ \ 0b0011101111100011,\ }
+\DoxyCodeLine{\ \ \ \ 0b0111110111110001,\ }
+\DoxyCodeLine{\ \ \ \ 0b0111110111111010,}
+\DoxyCodeLine{\ \ \ \ 0b0011101111111100,}
+\DoxyCodeLine{\ \ \ \ 0b0000011111111110,}
+\DoxyCodeLine{\ \ \ \ 0b0000011110000010,}
+\DoxyCodeLine{\ \ \ \ 0b0000011110000010,}
+\DoxyCodeLine{\ \ \ \ 0b0000011110000010,}
+\DoxyCodeLine{\ \ \ \ 0b0000011110000010,}
+\DoxyCodeLine{\ \ \ \ 0b0000011110000110,}
+\DoxyCodeLine{\ \ \ \ 0b0011101111111100,}
+\DoxyCodeLine{\ \ \ \ 0b0111110110011000,}
+\DoxyCodeLine{\ \ \ \ 0b0111110110110000,}
+\DoxyCodeLine{\ \ \ \ 0b0011101111100000,}
+\DoxyCodeLine{\ \ \ \ 0b0000011111000000}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Bitmap do baja. 
+
+\Hypertarget{gamePrototype_8c_a0a0d4ec4767823f46441fd047fe67a50}\index{gamePrototype.c@{gamePrototype.c}!BUTTON@{BUTTON}}
+\index{BUTTON@{BUTTON}!gamePrototype.c@{gamePrototype.c}}
+\doxysubsubsection{\texorpdfstring{BUTTON}{BUTTON}}
+{\footnotesize\ttfamily \label{gamePrototype_8c_a0a0d4ec4767823f46441fd047fe67a50} 
+const uint8\+\_\+t BUTTON\mbox{[}$\,$\mbox{]} = \{6,7\}}
+
+
+
+Pinos do PORTD mapeados para os botões. 7 para acelerador e 6 para freiar. 
+
+\Hypertarget{gamePrototype_8c_aef60943cf81aefd3049a4631b9cf2ffb}\index{gamePrototype.c@{gamePrototype.c}!lama@{lama}}
+\index{lama@{lama}!gamePrototype.c@{gamePrototype.c}}
+\doxysubsubsection{\texorpdfstring{lama}{lama}}
+{\footnotesize\ttfamily \label{gamePrototype_8c_aef60943cf81aefd3049a4631b9cf2ffb} 
+const uint16\+\_\+t lama\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ 0b0110100001101000,\ }
+\DoxyCodeLine{\ \ \ \ 0b1111110001101000,\ }
+\DoxyCodeLine{\ \ \ \ 0b0111101001101000,\ }
+\DoxyCodeLine{\ \ \ \ 0b0001111101101000,}
+\DoxyCodeLine{\ \ \ \ 0b0001100101101000,}
+\DoxyCodeLine{\ \ \ \ 0b0111101001101000,}
+\DoxyCodeLine{\ \ \ \ 0b1111110001101000,}
+\DoxyCodeLine{\ \ \ \ 0b0110100001101000}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Bitmap para textura de Lama. Ainda não foi aplicado. 
+
+\Hypertarget{gamePrototype_8c_a9d7e51b8a2c199589fb540134709ab89}\index{gamePrototype.c@{gamePrototype.c}!move@{move}}
+\index{move@{move}!gamePrototype.c@{gamePrototype.c}}
+\doxysubsubsection{\texorpdfstring{move}{move}}
+{\footnotesize\ttfamily \label{gamePrototype_8c_a9d7e51b8a2c199589fb540134709ab89} 
+uint8\+\_\+t move = 0}
+
+
+
+Velocidade de movimento atual do jogador (aceleração). 
+
+\Hypertarget{gamePrototype_8c_a89227fb3608a6062dbfe97170f6fb225}\index{gamePrototype.c@{gamePrototype.c}!PROGMEM@{PROGMEM}}
+\index{PROGMEM@{PROGMEM}!gamePrototype.c@{gamePrototype.c}}
+\doxysubsubsection{\texorpdfstring{PROGMEM}{PROGMEM}}
+{\footnotesize\ttfamily \label{gamePrototype_8c_a89227fb3608a6062dbfe97170f6fb225} 
+const uint8\+\_\+t COS\+\_\+\+TABLE \mbox{[}36\mbox{]} PROGMEM}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{255,\ 253,\ 248,\ 240,\ 230,\ 217,\ 201,\ 183,\ 164,\ 142,\ 120,\ 98,\ 77,\ 57,\ 40,\ 25,\ 13,\ 5,}
+\DoxyCodeLine{0,\ 2,\ 8,\ 18,\ 32,\ 49,\ 68,\ 89,\ 112,\ 135,\ 157,\ 178,\ 196,\ 212,\ 225,\ 236,\ 244,\ 250}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Tabela de Cossenos escalonada. 
+
+Tabela precalculada (armazenada em PROGMEM/\+Flash) para gerar o terreno de forma procedural. Os valores são escalonados de 0 a 255. \Hypertarget{gamePrototype_8c_a52cfa45d5d52d8b68b29b1bea811c044}\index{gamePrototype.c@{gamePrototype.c}!terreno@{terreno}}
+\index{terreno@{terreno}!gamePrototype.c@{gamePrototype.c}}
+\doxysubsubsection{\texorpdfstring{terreno}{terreno}}
+{\footnotesize\ttfamily \label{gamePrototype_8c_a52cfa45d5d52d8b68b29b1bea811c044} 
+uint8\+\_\+t terreno = 0}
+
+
+
+Posição horizontal atual do terreno (usada para rolagem). 
+
